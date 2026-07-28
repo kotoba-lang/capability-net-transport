@@ -1,0 +1,5 @@
+(ns kotoba.capability.net.transport
+  "Importable contract for net/transport.")
+
+(def manifest
+  {:schema "kotoba.capability.repository.v1", :capability/version 1, :capability/dependencies #{}, :capability/imports #{:transport-write :transport-close :transport-read}, :authority "kotoba-lang/kotoba-core-contracts", :capability/default-policy :approval-required, :capability/artifact {:format :wasm-component, :digest-required? true, :signature-required? true}, :capability/radicle-rid nil, :capability/repository "kotoba-lang/capability-net-transport", :capability/id "net/transport", :capability/effects #{:data-egress :network-read :network-write}, :capability/provider-status :contract-only})
