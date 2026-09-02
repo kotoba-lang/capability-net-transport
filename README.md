@@ -2,6 +2,11 @@
 
 Atomic authority package for `net/transport`.
 
+`kotoba/capability/net/transport.kotoba` carries the provider-side TCP header
+shape shared by native transports. It reads the data-offset field and admits
+option-bearing SYN-ACK packets without confusing Ethernet padding or TCP
+options with application payload.
+
 - imports: `#{:transport-write :transport-close :transport-read}`
 - effects: `#{:data-egress :network-read :network-write}`
 - default policy: `:approval-required`
